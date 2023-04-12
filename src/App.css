@@ -5,47 +5,25 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .tile{
   background-color: aqua;
+  width: 9vw;
+  height: 9vw;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.hidden-tile{
   margin: auto;
   width: 9vw;
   height: 9vw;
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .board{
@@ -59,4 +37,9 @@
   grid-template-rows: auto auto auto;
   align-content: space-around;
   justify-content: space-around;
+}
+
+.tile-button{
+  width: min-content;
+  height: min-content;
 }

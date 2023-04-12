@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Board tiles={range.map(i => <Tile content={<h1>{i}</h1>}/>)}/>
+      <Board tiles={[...range.slice(0, -1).map(i => <Tile content={<h1>{i}</h1>}/>), <Tile isHidden={true} content={<h1>{range.at(-1)}</h1>}/>]}/>
     </div>
   )
 }

@@ -2,12 +2,13 @@ import * as React from 'react';
 
 export interface ITileProps {
     content : React.ReactNode
+    isHidden? : boolean
 }
 
-export default function Tile ({content}: ITileProps) {
+export default function Tile ({content, isHidden}: ITileProps) {
   return (
-    <div className='tile'>
+    <button className={isHidden? 'hidden-tile' : 'tile'}>
       {content}
-    </div>
+    </button>
   );
 }
